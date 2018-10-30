@@ -14,10 +14,10 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 public class BoardDao implements BoardDaoInf {
 	public BoardDao(){
-		
+		 
 	}
 	/**
-	 * 
+	 * 21312
 	* Method : boardListAll
 	* 작성자 : chan
 	* 변경이력 :
