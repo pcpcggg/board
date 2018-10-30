@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<properties resource="kr/or/ddit/db/db.properties"/>
+	
+	<typeAliases>
+		<typeAlias type="kr.or.ddit.user.vo.UserVo" alias="userVo"/>
+		<typeAlias type="kr.or.ddit.board.vo.PostsVo" alias="postsVo"/>
+		<typeAlias type="kr.or.ddit.board.vo.NoticeVo" alias="noticeVo"/>
+		<typeAlias type="kr.or.ddit.board.vo.FileVo" alias="fileVo"/>
+		<typeAlias type="kr.or.ddit.board.vo.CommentVo" alias="commentVo"/>
+		<typeAlias type="kr.or.ddit.board.vo.PageVo" alias="pageVo"/>
+	</typeAliases>
+	
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.username}"/>
+        <property name="password" value="${db.password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <mapper resource="kr/or/ddit/db/board.xml"/>
+    <mapper resource="kr/or/ddit/db/user.xml"/>
+  </mappers>
+  
+</configuration>
